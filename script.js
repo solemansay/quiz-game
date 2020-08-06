@@ -11,19 +11,39 @@ var answer3 = document.querySelector("#answer3");
 var answer4 = document.querySelector("#answer4");
 var timerEl = document.querySelector("#count");
 
+var answerArrofObjIndex = 0;
+
+var answerArrofObj = [
+    {
+        answerArr: ["Hedwig", "Trevour", "Crookshanks", "Dobby"],
+        solution: 0
+    },
+    {
+        answerArr: ["Swanson", "Weasley", "Granger", "Potter"],
+        solution: 1
+    },
+    {
+        answerArr: ["Dumbledoor", "Trevour", "Voldemort", "Seious Black"],
+        solution: 2
+    },
+    {
+        answerArr: ["Tom Riddle", "Severus Snape", "Lucious Malfoy", "Serious Black"],
+        solution: 3
+    }
+]
+
 
 var questionArr = [
     "What is the name of Harry Potters owl?",
     "What is Ron's last name?",
-    "What is Harry Potter famous for?",
     "Who is the main villain in Harry Potter",
     "Who is Harry Potters godfather?",
-    "What is Hermiones Pet?",
-    "What is the potion used to prevent a werewolf's full transformation?"
 ];
 
-
+//start button
 startButton.addEventListener("click", setCounter)
+
+
 
 function setCounter() {
     if (event.target.matches("button")) {
@@ -39,11 +59,38 @@ function setCounter() {
         if (timeLeft === 0) {
             timerEl.textContent = "time left: 0";
             clearInterval(timeInterval);
-            endPage();
+            endScreen();
         }
 
-    }, 1000);
+    }, 100);
+
+    displayQuestions();
 }
+
+answer1 || answer2 || answer3 || answer4.addEventListener("click", displayQuestions)
+
+
+function displayQuestions() {
+
+    // if (answerArrofObjIndex !== 0) {
+    //     document.getElementById("questionText").children[1].remove();
+
+    // }
+
+    // var currentLayout = answerArrofObj[answerArrofObjIndex];
+
+    // var question = document.createElement("h3");
+    // //question.classList.add("quest");
+    // question.setAttribute("src", currentLayout.questionArr[currentLayout.solution])
+
+    // document.getElementById("questionText").appendChild(question);
+
+    // for (var i = 0; i < currentLayout.questionArr.length; i++) {
+    //     setQuestion(i)
+    // }
+
+}
+
 
 setCounter();
 

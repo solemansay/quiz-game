@@ -15,27 +15,52 @@
 
 <body class="text-monospace">
 
-    <a href="high-scores.html" class="text-left btn btn-outline-success m-3 float-left" type="button">view high
-        scores</a>
-    <p class="h4 text-right mr-4 mt-2"> 75</p>
+    <header>
+        <a href="high-scores.html" class="text-left btn btn-outline-success mt-0 ml-3 float-left" type="button">view
+            high
+            scores</a>
+        <p class="h4 text-right mr-4 mt-2"><span id="count">time left: 75</span></p>
+    </header>
+
+    <main class="container text-center">
 
 
-    <div class="container">
-        <h1 class="hpTitle text-center m-5">Harry Potter Quiz!</h1>
-        <p class =" text-center instructions"> Welcome to the Harry Potter quiz, if you would like to test your 
-            knowledge on all things wizard and witch please click the start button. You have 75 seconds to complete the 
-            quiz, everytime you answer incorectly you are docked 10 seconds, the time left after the quiz is your final score.</p>
+        <article class="startScreen">
 
-        <h3 class="text-center questionText"> question goes here</h3>
+            <h1 class="text-center m-5" id="hpTitle">Harry Potter Quiz!</h1>
+            <p class="text-center" id="instructions"> Welcome to the Harry Potter quiz, if you would like to test your
+                knowledge on all things wizard and witch please click the start button. You have 75 seconds to complete
+                the
+                quiz, everytime you answer incorectly you are docked 10 seconds, the time left after the quiz is your
+                final score.
+            </p>
 
-        <div class="buttons">
-            <button type="button" class="btn btn-secondary btn-block mt-4" class="answer1"></button>
-            <button type="button" class="btn btn-secondary btn-block" class="answer2">Answer2</button>
-            <button type="button" class="btn btn-secondary btn-block" class="answer3">Answer3</button>
-            <button type="button" class="btn btn-secondary btn-block" class="answer4">Answer4</button>
+            <button type="button" class="btn btn-secondary mt-4" id="startButton"> start the quiz!</button>
+        </article>
+
+        <div class="d-none quizScreen">
+
+            <h3 class="text-center" id="questionText"> question goes here</h3>
+
+            <div class="buttons">
+                <button id="0" type="button" class="btn btn-secondary btn-block mt-4">Answer1</button>
+                <button id="1" type="button" class="btn btn-secondary btn-block">Answer2</button>
+                <button id="2" type="button" class="btn btn-secondary btn-block">Answer3</button>
+                <button id="3" type="button" class="btn btn-secondary btn-block">Answer4</button>
+            </div>
+
         </div>
 
-    </div>
+        <div class="endScreen d-none">
+
+            <h3 id="endTitle"></h3>
+            <p id="finalScore">your final score is:</p>
+
+
+
+        </div>
+
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -46,7 +71,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
         integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
         crossorigin="anonymous"></script>
-    <script href="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 

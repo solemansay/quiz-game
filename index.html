@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 
@@ -19,7 +18,7 @@
         <a href="high-scores.html" class="text-left btn btn-outline-success mt-0 ml-3 float-left" type="button">view
             high
             scores</a>
-        <p class="h4 text-right mr-4 mt-2"><span id="count">time left: 75</span></p>
+        <p class="h4 text-right mr-4 mt-2"><span id="count">time left: </span></p>
     </header>
 
     <main class="container text-center">
@@ -40,22 +39,32 @@
 
         <div class="d-none quizScreen">
 
-            <h3 class="text-center" id="questionText"> What is the name of Harry Potters owl?</h3>
-
-            <div class="buttons">
-                <button id="0" type="button" class="btn btn-secondary btn-block mt-4">Hedwig</button>
-                <button id="1" type="button" class="btn btn-secondary btn-block">Trevour</button>
-                <button id="2" type="button" class="btn btn-secondary btn-block">Crookshanks</button>
-                <button id="3" type="button" class="btn btn-secondary btn-block">Dobby</button>
+            <div id="questionText" class="text-center">
+                <h3></h3>
             </div>
 
+            <div class="buttons">
+                <button id="btn0" type="button" class="btn btn-secondary btn-block mt-4"></button>
+                <button id="btn1" type="button" class="btn btn-secondary btn-block"></button>
+                <button id="btn2" type="button" class="btn btn-secondary btn-block"></button>
+                <button id="btn3" type="button" class="btn btn-secondary btn-block"></button>
+            </div>
+            <div id="message"> </div>
         </div>
 
         <div class="endScreen d-none">
 
-            <h3 id="endTitle"></h3>
-            <p id="finalScore">your final score is:</p>
+            <div class="m-5" id="viewScore"></div>
 
+            <div class="input-group mb-3">
+
+                <div class="input-group-prepend mt-5">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Submit</button>
+                </div>
+
+                <input type="text" class="form-control mt-5 text-center" placeholder="Initials" aria-label="Example text with button addon"
+                    aria-describedby="button-addon1" id="initials">
+            </div>
 
         </div>
 

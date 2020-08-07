@@ -27,12 +27,12 @@ var answerArrofObj = [
   },
   {
     question: "Who is the main villain in Harry Potter",
-    answerArr: ["Dumbledoor", "Trevour", "Voldemort", "Seious Black"],
+    answerArr: ["Voldemort", "Dumbledoor", "Trevour", "Seious Black"],
     answer: "Voldemort"
   },
   {
     question: "Who is Harry Potters godfather?",
-    answerArr: ["Tom Riddle", "Severus Snape", "Lucious Malfoy", "Serious Black"],
+    answerArr: ["Tom Riddle", "Severus Snape","Serious Black", "Lucious Malfoy" ],
     answer: "Serious Black"
   }
 ]

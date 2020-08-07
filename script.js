@@ -154,12 +154,12 @@ submit.addEventListener("click", function (event) {
 
   var initials = document.getElementById("initials");
   var i = initials.value.trim();
-  JSON.stringify(timeLeft);
-  userData.push({i, timeLeft})
-  
-  console.log(userData)
-  localStorage.setItem
-
+  var highScores = JSON.parse(localStorage.getItem("highScores")) || []
+  var newScore = {initials: i, score: timeLeft}
+  highScores.push(newScore);
+  localStorage.setItem("highScores", JSON.stringify(highScores))
+  window.location.href = "high-scores.html";
+  // loadScores()
 })
 
 var userData = [];

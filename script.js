@@ -146,20 +146,23 @@ function showResults() {
   questionText.style.display = "none";
   message.setAttribute("style", "display: none !important");
   endScreen.setAttribute("style", "display: block !important");
-  var finalScore = timeLeft
   var viewScore = document.getElementById("viewScore")
-  viewScore.textContent = "Your score is " + finalScore + " Enter your initials below to save your score!";
+  viewScore.textContent = "Your score is " + timeLeft + " Enter your initials below to save your score!";
 }
 
 submit.addEventListener("click", function (event) {
 
   var initials = document.getElementById("initials");
   var i = initials.value.trim();
-  console.log(i)
-
+  JSON.stringify(timeLeft);
+  userData.push({i, timeLeft})
   
+  console.log(userData)
+  localStorage.setItem
 
 })
+
+var userData = [];
 
 
 

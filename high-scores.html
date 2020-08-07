@@ -11,28 +11,29 @@
   <title>High scores!</title>
 </head>
 
-<body class="text-monospace" onload= "scoreSheet()">
+<body class="text-monospace" onload="scoreSheet()">
+
 
   <a href="index.html" class="text-left btn btn-outline-success m-3 float-left" type="button">back to quiz</a>
+
   <div class="container">
-    
-    <h1 class = "text-center">High Scores!</h1>
 
-    <table style= "width: 30%" id = "table">
-    <thead class="table-dark text-center">
+    <h1 class="text-center">High Scores!</h1>
+    <div class="table-responsive">
+      <table style="width: 33%" id="table" class="table-bordered m-5 mx-auto">
+        <thead class="table-dark text-center">
 
-      <tr>
-        <th> Initials </th>
+          <tr>
+            <th> Initials </th>
 
-        <th> Score </th>
-
-
-      </tr>
-    </thead>
+            <th> Score </th>
 
 
-    </table> 
+          </tr>
+        </thead>
+      </table>
 
+    </div>
   </div>
 
 
@@ -46,7 +47,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
     integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
     crossorigin="anonymous"></script>
-    <script src="high-score.js"></script>
+  <script src="high-score.js"></script>
 </body>
 
 </html>

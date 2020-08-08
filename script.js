@@ -13,6 +13,7 @@ var submit = document.querySelector("#button-addon1");
 
 var userArr = [];
 var scoreArr = [];
+var userData = [];
 
 var answerArrofObj = [
   {
@@ -21,19 +22,49 @@ var answerArrofObj = [
     answer: "Hedwig"
   },
   {
-    question: "What is Ron's last name?",
+    question: "What is the spell used to cover an opponent in boils?",
+    answerArr: ["Waddiwasi", "Flagrate", "Locomotor Wibbly", "Furnunculus"],
+    answer: "Furnunculus"
+  },
+  {
+    question: "What is the Profession of Hermionie's parents?",
+    answerArr: ["geologists", "Flourists", "Dentists", "Veterinarians" ],
+    answer: "Dentists"
+  },
+  {
+    question: "What is Ronald's last name?",
     answerArr: ["Swanson", "Weasley", "Granger", "Potter"],
     answer: "Weasley"
   },
   {
-    question: "Who is the main villain in Harry Potter",
-    answerArr: ["Voldemort", "Dumbledoor", "Trevour", "Seious Black"],
+    question: "How many possible Quidditch fouls are there?",
+    answerArr: ["501", "300", "55", "700" ],
+    answer: "700"
+  },
+  {
+    question: "Who is the main villain throughout the Harry Potter trilogy?",
+    answerArr: ["Voldemort", "dumbledore ", "Trevour", "Professor Sprout"],
     answer: "Voldemort"
   },
   {
-    question: "Who is Harry Potters godfather?",
-    answerArr: ["Tom Riddle", "Severus Snape","Serious Black", "Lucious Malfoy" ],
+    question: "In which county surrounding London did Harry Potter grow up?",
+    answerArr: ["Sussex", "Surrey", "Kent", "Hertfordshire"],
+    answer: "Surrey"
+  },
+  {
+    question: "How old was Dumbledore when he passed away?",
+    answerArr: ["97", "152", "115", "176" ],
+    answer: "115"
+  },
+  {
+    question: "Who is Harry Potters legal godfather?",
+    answerArr: ["Tom Riddle", "Severus Snape", "Vernon Dursley", "Serious Black" ],
     answer: "Serious Black"
+  },
+  {
+    question: "How old was the co-creator of the philosopher's stone, Nicholas Flamel, when he decided to destroy it?",
+    answerArr: ["450", "665", "397", "635" ],
+    answer: "665"
   }
 ]
 
@@ -50,7 +81,7 @@ document.getElementById("startButton").onclick = function (quiz) {
 var timeLeft = 0;
 var ended = false;
 function setCounter() {
-  timeLeft = (answerArrofObj.length * 10);
+  timeLeft = (answerArrofObj.length * 8);
   if (event.target.matches("button")) {
     startScreen.setAttribute("style", "display: none !important");
     quizScreen.setAttribute("style", "display: block !important");
@@ -107,12 +138,12 @@ function renderQuiz() {
 
   }
 
-  //<---- this is a function to keep the user on the page for a second and a half, allowing them to see if they answered wrong or right.
+  //<---- this is a function to keep the user on the page for a second, allowing them to see if they answered wrong or right.
   else {
     ended = true;
     setTimeout(() => {
       showResults();
-    }, 1500);
+    }, 1000);
       
   }
 }
@@ -131,7 +162,7 @@ buttons.addEventListener("click", function (event) {
     }
     else {
       ended = true;
-      message.textContent = "You got the answer wrong with less than 10 seconds remaining, sorry, times up!"
+      message.textContent = "You got the answer wrong with less than 10 seconds remaining, sorry, time's up!"
       showResults();
     }
   }
@@ -140,14 +171,15 @@ buttons.addEventListener("click", function (event) {
   renderQuiz();
 })
 
-// function hides quiz questions and choices and makes a calculate score button appear
+// function hides quiz questions and choices making the initials text field appear
 function showResults() {
   buttons.style.display = "none";
   questionText.style.display = "none";
   message.setAttribute("style", "display: none !important");
   endScreen.setAttribute("style", "display: block !important");
   var viewScore = document.getElementById("viewScore")
-  viewScore.textContent = "Your score is " + timeLeft + " Enter your initials below to save your score!";
+  endTitle.textContent = "Fin!";
+  viewScore.textContent = "Your score is: " + timeLeft +  ". Enter your initials below to save your score!";
 }
 
 submit.addEventListener("click", function (event) {
@@ -161,8 +193,3 @@ submit.addEventListener("click", function (event) {
   window.location.href = "high-scores.html";
   // loadScores()
 })
-
-var userData = [];
-
-
-

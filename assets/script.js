@@ -58,8 +58,8 @@ var answerArrofObj = [
   },
   {
     question: "Who is Harry Potters legal godfather?",
-    answerArr: ["Tom Riddle", "Severus Snape", "Vernon Dursley", "Serious Black" ],
-    answer: "Serious Black"
+    answerArr: ["Tom Riddle", "Severus Snape", "Vernon Dursley", "Sirius Black" ],
+    answer: "Sirius Black"
   },
   {
     question: "How old was the co-creator of the philosopher's stone, Nicholas Flamel, when he decided to destroy it?",
@@ -138,7 +138,7 @@ function renderQuiz() {
 
   }
 
-  //<---- this is a function to keep the user on the page for a second, allowing them to see if they answered wrong or right.
+  //This is a function to keep the user on the page for a second, allowing them to see if they answered wrong or right.
   else {
     ended = true;
     setTimeout(() => {

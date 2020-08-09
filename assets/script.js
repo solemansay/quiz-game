@@ -103,7 +103,7 @@ function setCounter() {
 
     // if there is 10 seconds left on the clock the timer will turn red and the font size increases.
     if (timeLeft <= 10) {
-      timerEl.setAttribute("style", "color:red; font-size:33px;")
+      timerEl.setAttribute("style", "color:red; font-size:30px;")
     }
 
   }, 1000);
@@ -145,7 +145,8 @@ function renderQuiz() {
 
 // When user clicks button, function checks if the answer is right or wrong. And then preceeds to next question
 buttons.addEventListener("click", function (event) {
-  if (event.target.textContent == answerArrofObj[questionCounter].answer) {
+  if (event.target.textContent === answerArrofObj[questionCounter].answer) {
+    message.setAttribute("style", "color: green; font-size:20px;")
     message.textContent = "Correct!";
   }
   else {
@@ -153,6 +154,7 @@ buttons.addEventListener("click", function (event) {
     // If there is over 10 seconds left, 10 seconds are deducted from timer. If there is less, the quiz ends
     if (timeLeft > 11) {
       timeLeft = timeLeft - 10;
+      message.setAttribute("style", "color: red; font-size:28px;")
       message.textContent = "Wrong!";
     }
     else {

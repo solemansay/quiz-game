@@ -52,4 +52,6 @@ Once this was all set up I added an event listener for the start button which wo
 <img src=assets/questionCount.jpg>
 
 
-I created 2 more variables here one that would hold the question counter value (starting at 0) and the other to represent the previous question with the value of the answer array's length -1. The function following this is not the most dry that could be possible however, it works! I gave each button a variable and then added the text content from the answer array onto each button reaching in and grabbing the index of the first answer array. 
+I created 2 more variables here one that would hold the question counter value (starting at 0) and the other to represent the previous question with the value of the answer's array length -1. The function following this is not the most dry that could be possible however, it works! I gave each button a variable and then added the text content from the answer array onto each button reaching in and grabbing the index of the first answer array. 
+this function cycles the questions in the same way therefore synchronizing the questions with the correct answers.
+

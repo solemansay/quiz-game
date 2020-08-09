@@ -131,11 +131,6 @@ function renderQuiz() {
     btn3.textContent = answerArrofObj[questionCounter].answerArr[2];
     btn4.textContent = answerArrofObj[questionCounter].answerArr[3];
 
-    buttons.appendChild(btn1);
-    buttons.appendChild(btn2);
-    buttons.appendChild(btn3);
-    buttons.appendChild(btn4);
-
   }
 
   //This is a function to keep the user on the page for a second, allowing them to see if they answered wrong or right.

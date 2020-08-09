@@ -44,7 +44,7 @@ After establishing the global variables I began creating the question array that
 Once this was all set up I added an event listener for the start button which would triger the function for the timer (also be used for the final score) and the function to render the quiz page. The method that I used for the timer was to create a variable make it equal to 0 (timeLeft) and add 8 seconds per question on the quiz. In this way I could easily add more questions to my quiz which I have since done and have the js add the extra elotted time for me. I also added to the function that should the time run out, the text for the timer would read "Time's up!"
 
 
-<h2>Next came the question counter:</h2>
+<h2>Next came the question counter (renderQuiz function):</h2>
 
 -
 -
@@ -52,3 +52,4 @@ Once this was all set up I added an event listener for the start button which wo
 <img src=assets/questionCount.jpg>
 
 
+I created 2 more variables here one that would hold the question counter value (starting at 0) and the other to represent the previous question with the value of the answer array's length -1. The function following this is not the most dry that could be possible however, it works! I gave each button a variable and then added the text content from the answer array onto each button reaching in and grabbing the index of the first answer array. 

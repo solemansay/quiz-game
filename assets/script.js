@@ -131,16 +131,6 @@ function renderQuiz() {
     btn3.textContent = answerArrofObj[questionCounter].answerArr[2];
     btn4.textContent = answerArrofObj[questionCounter].answerArr[3];
 
-    btn1.style.display = "inline";
-    btn2.style.display = "inline";
-    btn3.style.display = "inline";
-    btn4.style.display = "inline";
-
-    buttons.appendChild(btn1);
-    buttons.appendChild(btn2);
-    buttons.appendChild(btn3);
-    buttons.appendChild(btn4);
-
   }
 
   //This is a function to keep the user on the page for a second, allowing them to see if they answered wrong or right.
@@ -168,6 +158,7 @@ buttons.addEventListener("click", function (event) {
     else {
       ended = true;
       message.textContent = "You got the answer wrong with less than 10 seconds remaining, sorry, time's up!"
+      timeLeft=0
       showResults();
     }
   }

@@ -96,12 +96,12 @@ function setCounter() {
     }
 
     if (timeLeft === 0) {
-      timerEl.textContent = "Time's up!";
       clearInterval(timeInterval);
-      endScreen();
+      timerEl.textContent = "Time's up!";
+      showResults();
     }
 
-    // if there is 10 seconds left on the clock the timer will turn red and the font size increases
+    // if there is 10 seconds left on the clock the timer will turn red and the font size increases.
     if (timeLeft <= 10) {
       timerEl.setAttribute("style", "color:red; font-size:33px;")
     }
@@ -130,6 +130,16 @@ function renderQuiz() {
     btn2.textContent = answerArrofObj[questionCounter].answerArr[1];
     btn3.textContent = answerArrofObj[questionCounter].answerArr[2];
     btn4.textContent = answerArrofObj[questionCounter].answerArr[3];
+
+    btn1.style.display = "inline";
+    btn2.style.display = "inline";
+    btn3.style.display = "inline";
+    btn4.style.display = "inline";
+
+    buttons.appendChild(btn1);
+    buttons.appendChild(btn2);
+    buttons.appendChild(btn3);
+    buttons.appendChild(btn4);
 
   }
 

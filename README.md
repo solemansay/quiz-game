@@ -45,7 +45,7 @@ After establishing the global variables I began creating the question array that
 Once this was all set up I added an event listener for the start button which would trigger the function for the timer (also be used for the final score) and the function to render the quiz page. The method that I used for the timer was to create a variable make it equal to 0 (timeLeft) and add 8 seconds per question on the quiz. In this way, I could easily add more questions to my quiz which I have since done and have the js add the extra allotted time for me. I also added to the function that should the time run out, the text for the timer would read "Time's up!"
 
 
-<h2>Next came the question counter (renderQuiz function):</h2>
+Next came the question counter (renderQuiz function):
 
 -
 

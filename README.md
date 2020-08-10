@@ -60,7 +60,7 @@ Next came the function to identify whether the answer that the user chose was co
 -
 
 -
-<img src=assets/buttons.jpg>
+<img src=assets/Buttons.jpg>
 
 The way that I achieved this was an event listener on all of the buttons which would trigger a comparison between the text content on the chosen button and the answer. if the question was answered correctly the user is rewarded with a message in green saying "correct!" and the next question would cycle. If the question is answered incorrectly, the user is shown a message "wrong!" in red and 10 seconds is docked from the timer/their total score. This function will keep cycling until the participant either answers all of the questions correctly or runs out of time. 
 

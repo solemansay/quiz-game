@@ -5,7 +5,6 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 
@@ -23,17 +22,25 @@
 
     <main class="container text-center">
 
-
         <article class="startScreen">
+
 
             <h1 class="text-center m-5" id="hpTitle">Harry Potter Quiz!</h1>
             <p class="text-center" id="instructions"> Welcome to the Harry Potter quiz, if you would like to test your
-                knowledge on all things witch and wizard please click the start button. You have a set amount of seconds to complete
-                the quiz, everytime you answer incorectly you are docked 10 seconds from the timer, the time remaing after the quiz is your
-                final score. GOOD LUCK!
+                knowledge on all things witch and wizard please click the start button. Press play on the audio snippet for extra motivation!
+                 You have a set amount of seconds to complete the quiz, everytime you answer incorectly you are docked 10 seconds from the timer, 
+                 the time remaing after the quiz is your final score. GOOD LUCK!
             </p>
 
-            <button type="button" class="btn btn-secondary mt-4" id="startButton"> start the quiz!</button>
+            <div>
+                <button type="button" class="btn btn-secondary mt-4" id="startButton"> start the quiz!</button>
+            </div class="col-12">
+
+            <audio controls autoplay  class="mt-5">
+                <source src="assets/hpTheme.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
         </article>
 
         <div class="d-none quizScreen">
@@ -53,7 +60,7 @@
 
         <div class="endScreen d-none">
 
-            <h2 class="m-5" id= "endTitle"></h2>
+            <h2 class="m-5" id="endTitle"></h2>
 
             <div class="m-5" id="viewScore"></div>
 
@@ -63,8 +70,8 @@
                     <button class="btn btn-outline-secondary" type="button" id="button-addon1">Submit</button>
                 </div>
 
-                <input type="text" class="form-control mt-5 text-center" placeholder="Initials" aria-label="Example text with button addon"
-                    aria-describedby="button-addon1" id="initials">
+                <input type="text" class="form-control mt-5 text-center" placeholder="Initials"
+                    aria-label="Example text with button addon" aria-describedby="button-addon1" id="initials">
             </div>
 
         </div>

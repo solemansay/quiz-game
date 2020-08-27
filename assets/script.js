@@ -11,10 +11,6 @@ var scoreBoard = document.querySelector("#table");
 var endScreen = document.querySelector(".endScreen");
 var submit = document.querySelector("#button-addon1");
 
-var userArr = [];
-var scoreArr = [];
-var userData = [];
-
 var answerArrofObj = [
   {
     question: "What is the name of Harry Potters owl?",
@@ -68,7 +64,6 @@ var answerArrofObj = [
   }
 ]
 
-
 //start button
 
 document.getElementById("startButton").onclick = function (quiz) {
@@ -114,12 +109,11 @@ var questionCounter = 0;
 var lastQ = answerArrofObj.length - 1;
 
 function renderQuiz() {
-
   if (questionCounter <= lastQ) {
 
     // Displays the current question and displays answers on the buttons
     var currentQ = answerArrofObj[questionCounter].question;
-    questionText.innerHTML = currentQ;
+    questionText.textContent = currentQ;
 
     var btn1 = document.getElementById("btn0");
     var btn2 = document.getElementById("btn1");
@@ -130,7 +124,6 @@ function renderQuiz() {
     btn2.textContent = answerArrofObj[questionCounter].answerArr[1];
     btn3.textContent = answerArrofObj[questionCounter].answerArr[2];
     btn4.textContent = answerArrofObj[questionCounter].answerArr[3];
-
   }
 
   //This is a function to keep the user on the page for a second, allowing them to see if they answered wrong or right.
@@ -171,9 +164,7 @@ buttons.addEventListener("click", function (event) {
 
 // function hides quiz questions and choices making the initials text field appear
 function showResults() {
-  buttons.style.display = "none";
-  questionText.style.display = "none";
-  message.setAttribute("style", "display: none !important");
+  quizScreen.setAttribute("style", "display: none !important");
   endScreen.setAttribute("style", "display: block !important");
   var viewScore = document.getElementById("viewScore")
   endTitle.textContent = "Fin!";
@@ -189,5 +180,4 @@ submit.addEventListener("click", function (event) {
   highScores.push(newScore);
   localStorage.setItem("highScores", JSON.stringify(highScores))
   window.location.href = "high-scores.html";
-  // loadScores()
 })

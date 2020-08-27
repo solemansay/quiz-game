@@ -7,7 +7,7 @@ var scores = JSON.parse(localStorage.getItem("highScores"))
 scores = scores.sort(function(a, b) {
         return b.score - a.score;
       });
-console.log(scores.length)
+
 for(var i = 0; i<scores.length; i++)
 {
   console.log(scores[i].initials)

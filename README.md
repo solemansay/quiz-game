@@ -1,6 +1,6 @@
 # quiz-game
 
-https://solemansay.github.io/quiz-game/
+Click here to view the Deployed [website](https://solemansay.github.io/quiz-game/)
 
 I created this quiz to challenge my JS writing skills along with furthering my knowledge of functions. It is a simple quiz on the popular novels and movies Harry Potter. In order to begin the quiz, you must press the start button, after which a timer will begin, you will be docked 10 points for every wrong answer that you input. at the end of the quiz, your remaining time will be your final score. Enter your initials to be added to the leaderboard and see who knows Harry Potter the best! 
 
@@ -30,16 +30,8 @@ I started this page by creating some global variables that I would need througho
 
 <img src=assets/variables.jpg>
 
--
-
--
-
 
 After establishing the global variables I began creating the question array that would be used to cycle through questions and answers.
-
--
-
--
 
 
 <img src=assets/questionArray.jpg>
@@ -49,9 +41,6 @@ Once this was all set up I added an event listener for the start button which wo
 
 Next came the question counter (renderQuiz function):
 
--
-
--
 
 <img src=assets/questionCount.jpg>
 
@@ -59,18 +48,14 @@ I created 2 more variables here one that would hold the question counter value (
 this function cycles the questions in the same way therefore synchronizing the questions with the answers.
 
 Next came the function to identify whether the answer that the user chose was correct or not. 
--
 
--
+
 <img src=assets/Buttons.jpg>
 
 The way that I achieved this was an event listener on all of the buttons which would trigger a comparison between the text content on the chosen button and the answer. if the question was answered correctly the user is rewarded with a message in green saying "correct!" and the next question would cycle. If the question is answered incorrectly, the user is shown a message "wrong!" in red and 10 seconds is docked from the timer/their total score. This function will keep cycling until the participant either answers all of the questions correctly or runs out of time. 
 
 Once the game is complete the user is taken to a page where they can submit their initials to enter their score on the score-board. 
 
--
-
--
 
 <img src=assets/score.jpg>
 
@@ -81,8 +66,15 @@ The Javascript used for the scoreboard is as bellow:
 
 <img src=assets/scoreboard.jpg>
 
--
 
--
+```
+Thank you for viewing my Harry Potter Quiz project! I hoped you enjoyed my solution and continue to follow my 
+career as a jr full-stack web developer. 
+-Soleman Sayeed
+```
 
-Thank you for viewing my Harry Potter trivia quiz I hope you enjoyed it and continue to follow my career as a full-stack web developer!
+## Questions
+  
+If you have any questions anout the repo, open an issue or contact me directly at [solemansay](https://github.com/solemansay/). 
+Or send me an email at solemansay@gmail.com
+

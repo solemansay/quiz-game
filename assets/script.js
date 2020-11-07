@@ -76,7 +76,7 @@ document.getElementById("startButton").onclick = function (quiz) {
 var timeLeft = 0;
 var ended = false;
 function setCounter() {
-  timeLeft = (answerArrofObj.length * 8);
+  timeLeft = (answerArrofObj.length * 10);
   if (event.target.matches("button")) {
     startScreen.setAttribute("style", "display: none !important");
     quizScreen.setAttribute("style", "display: block !important");
